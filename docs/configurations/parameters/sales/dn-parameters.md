@@ -17,7 +17,7 @@ I parametri dei DDT di vendita permettono l'impostazione di base per gestire cor
 
 **Proposta automatica UM alternativa:** questo flag diventa editabile solo se è stato attivato il flag di gestione della doppia unità di misura e consente di riportare nel tab articoli del DDT l'unità di misura alternativa impostata nell'anagrafica articolo, nell’apposita colonna 'UM alternativa'; se non attivo, l'unità di misura non viene proposta.      
 
-**Controllo Disponibilità:** questo flag e gli altri relativi al controllo, visualizzazione e obbligorietà con la considerazion per area, nella versione attuale, non sono gestite.     
+**Controllo Disponibilità:** questo flag e gli altri relativi al controllo, visualizzazione e obbligorietà con la considerazione per area, nella versione attuale, non sono gestite.     
 
 **Unità di misura volume/pesi predefinita**: queste unità di misura vengono considerate come UM di default da proporre nel tab [Trasporto](/docs/sales/sales-delivery-notes/insert-delivery-notes/sales-dn) del DDT, come unità di misura di volume e pesi; il dato è modificabile nei documenti. 
 

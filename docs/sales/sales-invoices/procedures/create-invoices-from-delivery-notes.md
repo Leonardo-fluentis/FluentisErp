@@ -3,7 +3,7 @@ title: Creazione fatture da DDT
 sidebar_position: 1
 ---
 
-La procedura si apre tramite il percorso **Vendite > Fatture di vendita > Procedure > Creazione da DDT**. 
+La procedura si apre tramite il percorso **Vendita > Fatture di vendita > Procedure > Creazione da DDT**. 
 
 Questa procedura permette di eseguire/ripristinare le operazioni di creazione delle fatture da una o più DDT.
 
@@ -33,7 +33,7 @@ Con l'aiuto di questi parametri si possono raggruppare i DDT dello stesso client
 
 **DDT di cambio diversi**: il flag attivo permette la creazione di una fattura da più DDT con tassi di cambio diversi.
 
-**Raggruppamento DDT per tipo e soluzione di pagamento**: i tipi pagamento possono essere ripresi da anagrafica del cliente o mantenuti quelli dei DDT. Nel caso non ci sia il raggruppamento per tipo pagamento, la fattura potrà contenere anche più righe di pagamento diverse. 
+**Raggruppamento DDT per tipo e soluzione di pagamento**: i tipi di pagamento possono essere ereditati dall'anagrafica del cliente o mantenuti da quelli impostati nei DDT. Nel caso non ci sia il raggruppamento per tipo pagamento, la fattura potrà contenere anche più righe di pagamento diverse. 
 
 *Trattamento pagamenti in fattura*
 
@@ -41,11 +41,9 @@ Se ci sono DDT con soluzioni di pagamento diverse e se non è stato impostato il
 
 **Ripristina quelli di anagrafica**: la fattura prenderà le soluzioni di pagamento dall'anagrafica (e non considera l'informazione inserita nei DDT). 
 
-**Mantiene quelli dei DDT** la fattura prenderà le soluzioni di pagamento inserite nei DDT.
-
 *Inserimento in fattura*
 
-**Raggruppa scadenze in fattura**: il flag attivo permette di raggruppare in una soluzione unica le scadenze con la data uguale ma provenienti da DDT diversi.
+**Raggruppa scadenze in fattura**: il flag attivo permette di raggruppare in un'unica soluzione le scadenze con la stessa data ma provenienti da DDT diversi.
 
 **Ricalcola CdC/CdP**: utilizzato nella contabilità analitica, serve per ricalcolare i centri di costo o di profitto.
 
@@ -66,6 +64,6 @@ Come ultima scheda è presente una scheda di ripristino: è possibile utilizzarl
 I dati nelle griglie in basso, **Fatture** e **DDT**, corrispondono alla valorizzazione selezionata nella griglia superiore (dopo aver filtrato i dati). Inoltre, in queste ultime due griglie, c'è la possibilità di visualizzare la fattura e il DDT corrispondente con doppio click sulla riga desiderata.
 
 *Pulsanti specifici*:
-> **Ricerca fatture**: permette di cercare i DDT valorizzate.  
-> **Ripristina creazione**: permette di ripristinare l'intera operazione, cioè nel caso della creazione di più fatture contemporaneamente, cancella tutte le fatture e ripristina i DDT.  
+> **Ricerca fatture**: permette di cercare i DDT valorizzati.  
+> **Ripristina creazione**: permette di ripristinare l'intera operazione e, nel caso della creazione di più fatture contemporaneamente, cancella tutte le fatture e ripristina i DDT.  
 > **Ripristina fattura**: permette di ripristinare la fattura selezionata nel tab *Fatture*.

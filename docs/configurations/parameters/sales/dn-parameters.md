@@ -17,11 +17,15 @@ I parametri dei DDT di vendita permettono l'impostazione di base per gestire cor
 
 **Proposta automatica UM alternativa:** questo flag diventa editabile solo se è stato attivato il flag di gestione della doppia unità di misura e consente di riportare nel tab articoli del DDT l'unità di misura alternativa impostata nell'anagrafica articolo, nell’apposita colonna 'UM alternativa'; se non attivo, l'unità di misura non viene proposta.      
 
-**Controllo Disponibilità:** questo flag e gli altri relativi al controllo, visualizzazione e obbligorietà con la considerazione per area, nella versione attuale, non sono gestite.     
+**Controllo Disponibilità:** questo flag e gli altri relativi al controllo, visualizzazione e obbligatorietà con la considerazione per area, nella versione attuale, non sono gestite.     
 
 **Unità di misura volume/pesi predefinita**: queste unità di misura vengono considerate come UM di default da proporre nel tab [Trasporto](/docs/sales/sales-delivery-notes/insert-delivery-notes/sales-dn) del DDT, come unità di misura di volume e pesi; il dato è modificabile nei documenti. 
 
-**Ricerca prezzi articoli in tutti i listini predefiniti**: quando si cercano il prezzo e gli sconti per un articolo all'interno di un DDT, il sistema segue delle regole basate sulle impostazioni configurate nell'anagrafica cliente, sotto la sezione *Listini*. Se è attivata l'opzione 'default' su un determinato tipo di listino, la ricerca di prezzi e sconti si concentrerà solo su quella specifica tipologia di listino; se il flag "default" non è attivo, il sistema estenderà la ricerca a tutti i tipi di listini presenti, seguendo un ordine di priorità. In pratica, con il flag 'default' attivo, il sistema cercherà prima un listino valido per la tipologia predefinita; se non trova risultati, passerà a controllare le altre tipologie di listino in ordine di priorità inserita. Tuttavia, se nell'anagrafica del cliente non è presente alcuna tipologia di listino impostata come 'default' e ci sono solo priorità, questo parametro non influenzerà la ricerca, anche se attivo.       
+**Ricerca prezzi articoli in tutti i listini predefiniti**: quando si cercano il prezzo e gli sconti per un articolo all'interno di un DDT, il sistema segue delle regole basate sulle impostazioni configurate nell'anagrafica cliente, sotto la sezione *Listini*. 
+- Se è attivata l'opzione 'default' su un determinato tipo di listino, la ricerca di prezzi e sconti si concentrerà solo su quella specifica tipologia di listino; 
+- Se il flag 'default' non è attivo, il sistema estenderà la ricerca a tutti i tipi di listini presenti, seguendo un ordine di priorità. 
+
+In pratica, con il flag 'default' attivo, il sistema cercherà prima un listino valido per la tipologia predefinita; se non trova risultati, passerà a controllare le altre tipologie di listino in ordine di priorità inserita. Tuttavia, se nell'anagrafica del cliente non è presente alcuna tipologia di listino impostata come 'default' e ci sono solo priorità, questo parametro non influenzerà la ricerca, anche se attivo.       
 
 **Proponi provvigione per gli articoli omaggio**: con questo flag verranno proposte le provvigioni agente anche per le righe articolo di tipo omaggio come avviene per le righe di tipo Articolo Codificato.     
 
@@ -29,9 +33,9 @@ I parametri dei DDT di vendita permettono l'impostazione di base per gestire cor
 
 **Numero massime righe**: è il numero massimo di articoli per una fattura, attivo solo nella versione romena.
 
-**Verifica articoli in esaurimento**: se settato, questo flag farà apparire un pop-up di avviso nel caso in cui vengano inseriti in DDT degli articoli che hanno settato in anagrafica il flag in Esaurimento e la data in cui l’articolo va in esaurimento; questo controllo evita di vendere articoli che non verranno più prodotti o riassortiti.      
+**Verifica articoli in esaurimento**: se attivo, questo flag farà apparire un pop-up di avviso nel caso in cui vengano inseriti in DDT degli articoli che hanno settato in anagrafica il flag in Esaurimento e la data in cui l’articolo va in esaurimento; questo controllo evita di vendere articoli che non verranno più prodotti o riassortiti.      
 
-**[Abilita Widget sconti semplificato](/docs/sales/sales-flow/discount-widget)**: attivando questo flag nella sezione Articoli verranno visualizzate due nuove colonne: *Sconti Articolo* e *Sconti Finali Articolo*. La colonna *Sconti Articolo* è modificabile e mostra gli sconti applicati automaticamente in base alle impostazioni relative al cliente, all'articolo, al listino o alla categoria di sconto. L'utente ha la possibilità di inserire, modificare o eliminare gli sconti direttamente in questa colonna. Per utilizzare questo widget è necessario che, oltre ad attivare il flag, sia specificato nel tipo di DDT quale tipo di sconto utilizzare.     
+**[Attivare Widget sconti semplificato](/docs/sales/sales-flow/discount-widget)**: se questo flag è attivo, nella sezione Articoli verranno visualizzate due nuove colonne: *Sconti Articolo* e *Sconti Finali Articolo*. La colonna *Sconti Articolo* è modificabile e mostra gli sconti applicati automaticamente in base alle impostazioni relative al cliente, all'articolo, al listino o alla categoria di sconto. L'utente ha la possibilità di inserire, modificare o eliminare gli sconti direttamente in questa colonna. Per utilizzare questo widget è necessario che, oltre ad attivare il flag, sia specificato nel tipo di DDT quale tipo di sconto utilizzare.     
 
 **Uso articolo cliente**: se settato, questo flag inserirà, nella griglia articoli del DDT, le colonne per il Codice e la Descrizione cliente inseriti in anagrafica articolo, tab Cliente.       
 
@@ -51,9 +55,9 @@ I parametri dei DDT di vendita permettono l'impostazione di base per gestire cor
 
 In questo tab sono presenti i seguenti campi:       
 
-**Pagamento**: specifica il valore usato per il pagamento del DDT cliente nel caso dell'evasione multipla di Ordini nel DDT: *Primo ordine*, *Anagrafica* oppure *Selezione manuale*.
+**Pagamento**: specifica il valore usato per il pagamento del DDT cliente nel caso dell'evasione multipla di Ordini nel DDT: *Primo ordine*, *Anagrafica*.
 
-**Destinatario**: specifica il valore usato per il destinatario del DDT cliente nel caso dell'evasione multipla di Ordini nel DDT: *Primo ordine*, *Anagrafica* oppure *Selezione manuale*.
+**Destinatario**: specifica il valore usato per il destinatario del DDT cliente nel caso dell'evasione multipla di Ordini nel DDT: *Primo ordine*, *Anagrafica*.
 
 **Controllo coerenza tra pagamenti DDT e ordine**: se attivo, il sistema non permetterà l'evasione da ordini con pagamenti diversi.
 
@@ -70,11 +74,11 @@ In questo tab sono presenti i seguenti campi:
 **Crea registrazione con la data del documento**: se attivo, la registrazione di magazzino viene generata utilizzando la *Data trasporto* indicata nel tab *Trasporto* del DDT, se presente; in caso contrario, viene utilizzata la data del DDT. 
 Se il flag non è attiva, la registrazione di magazzino verrà sempre creata utilizzando la data corrente.   
 
-**Priorità magazzino e causale di scarico alle righe articoli dei DDT**: se attivo il magazzino e la causale di scarico vengono letti dalle righe del DDT mentre se non viene attivato, verranno utilizzati il magazzino e la causale inseriti nei campi successivi (**Magazzino** e **Causale di magazzino**);
+**Priorità magazzino e causale di scarico alle righe articoli dei DDT**: se attivo, il magazzino e la causale di scarico vengono letti dalle righe del DDT. Se non attivo, verranno utilizzati il magazzino e la causale inseriti nei campi successivi (**Magazzino** e **Causale di magazzino**);
 
 **Carico/Scarico Automatico**: se attivo, lo scarico del DDT verrà effettuato in automatico all'attivazione del flag Stampata. Se non attivo lo scarico dovrà essere fatto con l'apposito pulsante.
 
-**Avviso articoli fittizi**: se attivo, durante lo scarico del DDT il sistema andrà a controllare se sono presenti degli articoli fittizi e nel caso in cui ve ne siano comparirà un messaggio che permetterà all'utente di scegliere se completare lo stesso la procedura oppure no; in caso di risposta affermativa tutto il DDT verrà scaricato (ad eccezione degli articoli fittizi ), mentre in caso di risposta negativa il DDT NON verrà scaricato. 
+**Avviso articoli fittizi**: se attivo, durante lo scarico del DDT il sistema andrà a controllare se sono presenti degli articoli fittizi e nel caso in cui ve ne siano comparirà un messaggio che permetterà all'utente di scegliere se completare lo stesso la procedura oppure no; in caso di risposta affermativa, tutto il DDT verrà scaricato (ad eccezione degli articoli fittizi ). In caso di risposta negativa il DDT NON verrà scaricato. 
 
 :::tip Ricorda
 Se il documento contiene **articoli fittizi**, la procedura terrà conto della *Tipologia di approvvigionamento* definita nei Parametri MRP dell’articolo:

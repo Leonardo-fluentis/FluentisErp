@@ -9,7 +9,7 @@ La tabella è interessata dalla procedura di [**Fast Start**](/docs/guide/fast-s
 Nel caso in cui si intenda configurare manualmente fare riferimento alla check list della pagina linkata
 :::
 
-La tabella si apre tramite il percorso **Tabelle > Vendite > Tipi DDT di vendita** ed è utilizzata per determinare le proprietà di un DDT.
+La tabella si apre tramite il percorso **Tabelle > Vendita > Tipi DDT di vendita** ed è utilizzata per determinare le proprietà di un DDT.
 
 Consente di inserire nuovi record o di ricercare quelli già esistenti per visualizzarli, modificarli oppure cancellarli.
 
@@ -27,11 +27,11 @@ Per poter inserire nuovi record è necessario cliccare nella griglia sulla prima
 
 **Valori**: se attivo, questo flag farà si che nella stampa DDT vengano mostrati i valori delle righe articolo presenti nel documento;
 
-**Tipo fattura/Descrizione tipo fattura**: in questi campi verrà definito il tipo fattura che si vorrà venga utilizzato per creare la fattura da DDT tramite l'apposita [procedura](/docs/sales/sales-invoices/procedures/create-invoices-from-delivery-notes). E' possibile creare la fattura dal DDT solo se questo campo è valorizzato con il tipo fattura;
+**Tipo fattura/Descrizione tipo fattura**: in questi campi verrà definito il tipo fattura che si vorrà utilizzare per creare la fattura da DDT tramite l'apposita [procedura](/docs/sales/sales-invoices/procedures/create-invoices-from-delivery-notes). E' possibile creare la fattura dal DDT solo se questo campo è valorizzato con il tipo fattura;
 
 **Causale Trasporto**: in questi campo andrà inserita la descrizione della causale di trasporto; si tratta di un campo di testo libero su cui indicare la causale che verrà proposta nel DDT;
 
-**Controllo Cliente**: se attivo,  questo flag consente al sistema di effettuare un controllo sul tipo anagrafica del conto/sottoconto che si è inserito nel documento per verificare che sia obbligatoriamente un cliente. Se così non fosse il sistema avviserà l'utente riportando un messaggio di errore. Sarebbe Obbligatorio attivarlo su tutte le tipologie di DDT di Vendita;
+**Controllo Cliente**: se attivo, questo flag consente al sistema di effettuare un controllo sul tipo anagrafica del conto/sottoconto che si è inserito nel documento per verificare che sia obbligatoriamente un cliente. Se così non fosse il sistema avviserà l'utente riportando un messaggio di errore. Sarebbe Obbligatorio attivarlo su tutte le tipologie di DDT di Vendita;
 
 **Blocca Doc. Stampato**: se attivo, questo flag non permette di modificare un DDT che risulti essere già con il flag Stampato settato in testata;
 
@@ -47,15 +47,13 @@ Per poter inserire nuovi record è necessario cliccare nella griglia sulla prima
 
 **Evasione quantità articolo non sommata**: se settato questo flag consentirà, nel momento in cui si andranno ad evadere queste tipologie di DDT, di riportare le quantità evase del documento di evasione suddivise per riga articolo senza sommare le quantità;
 
-**Agr. Acq. IVA**: se attivo, in fase di creazione DDT, il sistema andrà a verificare se per l'articolo utilizzato è presente un codice dell'IVA agricola altrimenti verrà utilizzato il codice IVA presente nell'anagrafica dell'articolo;
+**IVA agricola per vendite**: se attivo, in fase di creazione DDT, il sistema andrà a verificare se per l'articolo utilizzato è presente un codice dell'IVA agricola altrimenti verrà utilizzato il codice IVA presente nell'anagrafica dell'articolo;
 
 **Controlla Picking Scaricato**: se attivo, quando si crea una DDT da un Picking scaricato, si attiva in automatico il flag scaricato per la DDT. Si consiglia di attivare sempre questo flag qualora si utilizzi la gestione picking;
 
 **Blocca Quantità Picking**: se attivo, blocca la quantità e la quantità alternativa nel DDT creata da lista UDC. Si consiglia di attivare sempre questo flag qualora si utilizzi la gestione picking e UDC;
 
 **Permetti scarico lotti non disponibili** se attivo, permette anche lo scarico dei lotti non disponibili;
-
-**Gestione EDI**: se attivo, per il DDT di questo tipo è possibile creare un file EDI;
 
 **Prezzo Ivato**: se attivo, il sistema recupera il prezzo di vendita da listini o dall'anagrafica articolo e lo riporta con l'aggiunta dell'IVA. Se non trova il listino (nel caso per esempio di listino scaduto o listino in valuta non compatibile) recupera i costi o i prezzi dall'anagrafica articolo e li riporta comprensivi di IVA.
 
@@ -65,10 +63,18 @@ I costi e i prezzi in anagrafica sono in EUR, quindi il sistema li andrà anche 
 
 **Gestione matrici Extra Data**: se attivo, permette di visualizzare nel caso di gestione articoli con matrice, un tab aggiuntivo per l'imputazione dei valori della quantità per singola cella di matrice. Se non attivo, non viene visualizzato questo TAB e la conseguente matrice.
 
+**Stampa**: indica il nome della stampa di default quando si vuole stampare un documento.
+
+**Numero di copie**: indica il numero di copie di default quando si vuole stampare un documento.
+
+**Gestione Conai**: se attivo, indica che per quel tipo di documento è prevista la gestione CONAI. Per ulteriori informazioni, si rimanda alla gestione [CONAI](/docs/purchase/purchase-flow/conai).
+
 **Gestione cespiti**: questo flag abilita la gestione dei cespiti nel tipo fattura e nel campo successivo va specificato il tipo di operazione dei cespiti;
 
-**Tipo operazione**: in questa combo box è possibile selezionare il tipo di operazione dei cespiti tra diverse opzioni (rivalutazione, distruzione, plusvalenza, ecc.).       
+**Tipo operazione**: in questa combo box è possibile selezionare il tipo di operazione dei cespiti tra diverse opzioni (rivalutazione, distruzione, plusvalenza, ecc.);       
 
-**Tipo sconto/Descrizione**: in questa colonna è possibile associare la tipologia di sconto da proporre quando gli sconti vengono inseriti direttamente nella colonna *Sconti articolo* della griglia articoli dei documenti (per maggiori dettagli vedi l'articolo [Gestione Widget sconti semplificato](/docs/sales/sales-flow/discount-widget)).
+**Tipo sconto/Descrizione**: in questa colonna è possibile associare la tipologia di sconto da proporre quando gli sconti vengono inseriti direttamente nella colonna *Sconti articolo* della griglia articoli dei documenti (per maggiori dettagli vedi l'articolo [Gestione Widget sconti semplificato](/docs/sales/sales-flow/discount-widget));
+
+**Gestione EDI**: se attivo, per il DDT di questo tipo è possibile creare un file EDI;
 
 **Gestione RAEE**: questo flag abilita il tipo documento alla [Gestione RAEE](/docs/sales/sales-flow/raee).

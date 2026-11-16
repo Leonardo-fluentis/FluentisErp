@@ -115,7 +115,7 @@ Per poter utilizzare questa procedura vi sono delle condizioni iniziali che devo
 
  -  il cliente degli ordini deve essere lo stesso del DDT;
  -  l'ordine che si vuole evadere deve avere impostato il flag *Stampato* e la *Data conferma ordine*;
- -  nella tabella [Tipi DDT](/docs/configurations/tables/sales/delivery-notes-type) deve essere presente il flag su *Ordine* (che indica che il DDT può derivare da un ordine).    
+ -  nella tabella [Tipi DDT](/docs/configurations/tables/sales/delivery-notes-type) deve essere presente il flag su *Ordine* (che indica che il DDT può derivare da un ordine);    
  - solo se la procedura viene eseguita dalla Ricerca ordini, i tipi documento devono essere compatibili: nella tabella [Tipi ordine](/docs/configurations/tables/sales/sales-order-types) il tipo ordine che si vuole evadere deve avere impostato il tipo DDT corrispondente.        
 
 Si dovrà poi andare ad impostare nella testata del nuovo DDT, il *Tipo DDT* che si vuole creare (che deve corrispondere a quello impostato nella tabella dei *Tipi ordini*) e il *Cliente*. Una volta inseriti questi dati, bisognerà cliccare sul pulsante *Evasione ordini* per aprire la form di evasione.   
@@ -148,21 +148,21 @@ Per completare la procedura bisognerà poi cliccare sul pulsante *Trasferimento*
 
 #### Pulsanti specifici
 
-> **Ricerca** permette di cercare gli ordini fornitore.  
-> **Trasferimento** permette di trasferire i dati dell'ordine selezionato all'interno del nuovo DDT.  
-> **Evasione forzata dell'ordine** permette l'evasione forzata dell'ordine; nel caso in cui vengano selezionate alcune righe dell'ordine, verranno evase forzatamente solo le righe selezionate (con l'aggiunta del flag *Evaso forzato* in corrispondenza della riga articolo); nel caso venga evaso l'ordine intero, esso cambierà lo stato anche in testata.  
-> **Evasione ordini** permette l'evasione dell'ordine.  
-> **Espandi** permette di espandere l'intero albero degli ordini nella griglia sottostante, per visualizzare gli articoli contenuti in essi.  
-> **Comprimi** permette di comprimere la visualizzazione delle righe articolo, e di far visualizzare solamente le righe ordine.  
-> **Seleziona tutti** permette di selezionare tutti gli articoli dalla lista.  
-> **Deseleziona tutti** permette di deselezionare tutti gli articoli dalla lista.  
+> **Ricerca**: permette di cercare gli ordini fornitore.  
+> **Trasferimento**: permette di trasferire i dati dell'ordine selezionato all'interno del nuovo DDT.  
+> **Evasione forzata dell'ordine**: permette l'evasione forzata dell'ordine; nel caso in cui vengano selezionate alcune righe dell'ordine, verranno evase forzatamente solo le righe selezionate (con l'aggiunta del flag *Evaso forzato* in corrispondenza della riga articolo); nel caso venga evaso l'ordine intero, esso cambierà lo stato anche in testata.  
+> **Evasione ordini**: permette l'evasione dell'ordine.  
+> **Espandi**: permette di espandere l'intero albero degli ordini nella griglia sottostante, per visualizzare gli articoli contenuti in essi.  
+> **Comprimi**: permette di comprimere la visualizzazione delle righe articolo, e di far visualizzare solamente le righe ordine.  
+> **Seleziona tutti**: permette di selezionare tutti gli articoli dalla lista.  
+> **Deseleziona tutti**: permette di deselezionare tutti gli articoli dalla lista.  
 
 ### *Scarico automatico*
 
 L'altra procedura presente in testata DDT è lo scarico automatico da magazzino. Il pulsante si abilita se il documento è Stampato.      
 Ricordiamo che se nei [Parametri DDT](/docs/configurations/parameters/sales/dn-parameters) è abilitato lo scarico automatico, questa procedura verrà avviata in automatico una volta Stampato il documento.      
-Una volta avviata la procedura, Fluentis controlla la presenza di magazzino e causale nelle righe DDT e l'eventuale presenza di lotti e serial number se richiesti; nel caso la procedura non vada a buon fine viene avvisato l'utente con un errore.      
-Se la procedura va a buon fine, viene creata la [Registrazione di magazzino](/docs/logistics/warehouse/stock-records/record) che movimenta gli articoli del documento e viene inserito il flag **Scaricato** nella testata DDT.      
+Una volta avviata la procedura, Fluentis controlla la presenza di magazzino e causale nelle righe DDT e l'eventuale presenza di lotti e serial number se richiesti; nel caso in cui la procedura non vada a buon fine, l'utente viene avvisato con un errore.      
+Se la procedura va a buon fine, viene creata la [Registrazione di magazzino](/docs/logistics/warehouse/stock-records/record) che movimenta gli articoli del documento e viene inserito il flag **Scaricato** nella testata del DDT.      
 
 :::important Ricorda
 Se nei *[Parametri DDT](/docs/configurations/parameters/sales/dn-parameters) > tab Scarico* il flag **Crea registrazione con la data del documento** non è attivo, la registrazione di magazzino sarà sempre eseguita con la data corrente.     
@@ -173,7 +173,7 @@ Se il flag nei parametri è attivo, la registrazione sarà creata utilizzando la
 
 In questo tab vengono inseriti tutti gli articoli con i relativi dati.
 
-Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).
+Per tutto quanto non dettagliato in questo documento sul funzionamento comune delle form, fare riferimento al seguente link [Funzionalità, pulsanti e campi comuni](/docs/guide/common).
 
 import InsertMode from './../../../import/sections/insert-mode.md'
 
@@ -186,13 +186,13 @@ import RowNumber from './../../../import/fields/row-number.md'
 <RowNumber />
 
 - **Tipo riga**: offre la possibilità di selezionare, dalla combo-box, articoli con caratteristiche diverse:
->- *Articolo codificato*: sono gli articoli codificati in anagrafica e possono essere contabilizzati in contabilità analitica e registrati in magazzino.
->- *Articolo non-codificato*: sono articoli descrittivi che possono essere contabilizzati in contabilità analitica ma non possono essere movimentati a magazzino.
->- *Articolo spese*: sono articoli codificati o non-codificati e vengono riassunti in modo distinto nei riepiloghi dei documenti. Se l'articolo spesa è codificato e di interesse fiscale verrà movimentato in magazzino, se è non codificato oppure non di interesse fiscale non verranno movimentati a magazzino.
->- *Articolo note*: sono note descrittive riportate nella stampa del documento; non incidono sulla contabilità e sul magazzino.
->- *Articolo omaggio*: l'articolo omaggio viene gestito come un articolo codificato o non codificato ai fini fiscali e di magazzino, ma essendo un omaggio viene conteggiato separatamente nei riepiloghi del documento e in base al flag "Rivalsa iva" viene calcolato l'importo dell'iva dell'omaggio a carico del soggetto oppure no.
+>- *Articoli codificati*: sono gli articoli codificati in anagrafica e possono essere contabilizzati in contabilità analitica e registrati in magazzino.
+>- *Articoli non-codificati*: sono articoli descrittivi che possono essere contabilizzati in contabilità analitica ma non possono essere movimentati a magazzino.
+>- *Articoli spese*: sono articoli codificati o non-codificati e vengono riassunti in modo distinto nei riepiloghi dei documenti. Se l'articolo spesa è codificato e di interesse fiscale verrà movimentato in magazzino, se è non codificato oppure non di interesse fiscale non verranno movimentati a magazzino.
+>- *Articoli note*: sono note descrittive riportate nella stampa del documento; non incidono sulla contabilità e sul magazzino.
+>- *Articoli omaggio*: gli articoli omaggio vengono gestiti come gli articoli codificati o non codificati ai fini fiscali e di magazzino, ma essendo omaggi vengono conteggiati separatamente nei riepiloghi del documento. In base al flag "Rivalsa iva" viene calcolato l'importo dell'iva degli omaggi a carico del soggetto o meno.
 :::note[NOTA]
-Se si parte direttamente con l'inserimento dell'articolo, la sua classe, il codice e il tipo riga - Articolo codificato vengono inseriti automaticamente.
+Se si inserisce direttamente l'articolo, la classe, il codice e il tipo riga (Articolo codificato) vengono inseriti automaticamente.
 :::
 
 - **Barcode**: se nei [Parametri DDT](/docs/configurations/parameters/sales/dn-parameters) è stata abilitata la gestione dei Barcode, comparirà la colonna Barcode dove selezionare il dato per l'articolo tra i Barcode inseriti in *Anagrafica articolo > Barcode*. 

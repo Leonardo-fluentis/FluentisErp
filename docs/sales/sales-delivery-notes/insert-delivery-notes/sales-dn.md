@@ -352,7 +352,7 @@ import SummariesExpenses from './../../../import/sections/summaries-expenses.md'
 
 <SummariesExpenses />
 
-- **Dettaglio dichiarazioni**: viene inserita l'eventuale dichhiarazione d'intento valida per il cliente.    
+- **Dettaglio dichiarazioni**: viene inserita l'eventuale dichiarazione d'intento valida per il cliente.    
 
 ### 4.4 Riepiloghi IVA
 
